@@ -13,6 +13,7 @@ RUN mvn package
 FROM openjdk:8-jre-alpine3.7
 WORKDIR /root/
 COPY --from=builder /usr/src/myapp/target/app.jar .
+docker push $ajay8142917337/my_image
 
 EXPOSE 8123
 ENTRYPOINT ["java", "-jar", "./app.jar"]
