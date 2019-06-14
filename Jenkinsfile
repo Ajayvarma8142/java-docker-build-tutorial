@@ -11,9 +11,9 @@ pipeline {
         bat 'mvn clean install'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        bat 'bat run Dockerfile'
+        bat 'run Dockerfile'
       }
     }
   }
